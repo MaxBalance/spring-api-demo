@@ -1,2 +1,2 @@
-# webDemo
-maven spring web
+# spring-api-demo
+maven spring webApi
