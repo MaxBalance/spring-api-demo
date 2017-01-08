@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.maxbalance.dao.TestUserDao">
+
+    <resultMap type="com.maxbalance.model.TestUser" id="testUserResultMap">
+        <id property="id" column="ID"/>
+        <result property="username" column="USERNAME"/>
+        <result property="password" column="PASSWORD"/>
+    </resultMap>
+
+    <!-- 新增测试用户 -->
+    <select id="createTestUser" parameterType="TestUser" resultType="TestUser" resultMap="testUserResultMap">
+			INSERT INTO TestUser (id,username, password) values(#{id},#{username},#{password})
+    </select>
+
+</mapper>
